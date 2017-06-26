@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="music.css" />
+		<link rel="stylesheet" href="iconfont/iconfont.css"/>
+	</head>
+	
+	<body>
+		<div class="container">
+			<!--侧边旋转CD效果-->
+			<div class="musicStyle">
+			    <img src="img/cd.png">
+			    <img src="img/img.jpg" id="singer">
+			    <img src="img/cd_tou.png" id="imgConn">
+		    </div>
+		    <!--播放器control部分-->
+		    <div class="musicName">
+				<h1 id="song"> 她的睫毛</h1>
+				<p> 周杰伦  专辑：叶惠美</p>
+				<div class="musicControl">
+						<a id="prev" href="javascript:;"> <i class="iconfont">&#xe63c;</i> </a>
+					    <a id="playBtn" href="javascript:;"> <i class="iconfont">&#xe651;</i> </a>
+					    <a id="next" href="javascript:;"> <i class="iconfont">&#xe63d;</i> </a>
+						<a id="refresh" href="javascript:;"> <i class="iconfont">&#xe611;</i></a>
+					    <a id="loopType" href="javascript:;"> <i class="iconfont">&#xe683;</i></a>
+					    <div>
+					    	<a id="volBtn" href="javascript:;"> <i class="iconfont">&#xe60d;</i> </a>
+					    	<input type="range" name="volRange" id="volRange" min="0" max="10" value="3" />
+					    </div>
+					    
+				</div>
+				<div class="musicControl_b">
+				<div>
+					<span id="currentTime">0:00</span> / <span id="totalTime">03:10</span>
+				</div>
+				<input type="range" name="playRange" id="playRange" min="0" step="1" value="0" max=""/>
+				</div>
+		    </div>
+		    <!--下边栏隐藏菜单效果-->
+		    <div class="menu">
+		    	<ul id="list">
+		    		<li id="activeTouch"><a href="javascript:;">她的睫毛</a> <span>周杰伦</span> <span>03:52</span></li>
+		    		<li><a href="javascript:;">东风破</a> <span>周杰伦</span> <span>05:15</span></li>
+		    		<li><a href="javascript:;">三年二班</a> <span>周杰伦</span> <span>04:40</span></li>
+		    		<li><a href="javascript:;">晴天</a> <span>周杰伦</span> <span>04:29</span></li>
+		    	
+		    	</ul>
+		    </div>
+		    <!--插入音乐插件-->
+		    <audio id="ado" src="music/她的睫毛.mp3"></audio>
+		
+		</div>
+	</body>
+	<script src="jquery-1.11.0.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="music.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			new Player({
+				target: "#container",
+				ado: "#ado",
+				singer: "#singer",
+				imgConn: "#imgConn",
+				song: "#song",
+				playRange: "#playRange",
+				refresh: "#refresh",
+				playBtn: "#playBtn",
+				currentTime: "#currentTime",
+				totalTime: "#totalTime",
+				loopType: "#loopType",
+				prev: "#prev",
+				next: "#next",
+				volBtn: "#volBtn",
+				volRange: "#volRange"	
+			})
+		}
+	</script>
+</html>

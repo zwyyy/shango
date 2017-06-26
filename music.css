@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  overflow: hidden;
+  width: 900px;
+  height: 591px;
+  margin: 30px auto;
+  background: url(img/bg.jpg) no-repeat;
+}
+.container .musicStyle {
+  margin: 66px 0 0 50px;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  float: left;
+}
+.container .musicStyle img {
+  display: block;
+}
+.container .musicStyle img:nth-child(2) {
+  border-radius: 100px;
+  border: 2px solid #eaeaea;
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: 50px;
+}
+.container .musicStyle img:nth-child(3) {
+  height: 180px;
+  border-radius: 100px;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 280px;
+  transform: rotate(-15deg);
+}
+@-webkit-keyframes active {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.container .musicStyle .move {
+  animation: active 5s linear infinite .5s;
+}
+.container .musicName {
+  width: 400px;
+  height: 220px;
+  float: right;
+  text-align: center;
+  margin: 120px 30px 0 0;
+  color: white;
+}
+.container .musicName h1,
+.container .musicName p {
+  margin-bottom: 10px ;
+}
+.container .musicName .musicControl {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 80px;
+}
+.container .musicName .musicControl_b {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 50px;
+}
+.container .musicName .musicControl_b input {
+  margin-left: 15px;
+  width: 70%;
+}
+.container .menu {
+  width: 80%;
+  height: 140px;
+  margin: 460px auto;
+  background: rgba(37, 37, 37, 0.6);
+}
+.container .menu ul {
+  width: 100%;
+}
+.container .menu ul li {
+  width: 91%;
+  height: 30px;
+  color: #ccc;
+  padding: 0 30px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.container .menu ul li a {
+  display: inline-block;
+  height: 100%;
+  float: left;
+  color: #ccc;
+}
+.container .menu ul li span {
+  display: inline-block;
+  height: 100%;
+  float: right;
+  margin-right: 5px;
+  -webkit-user-select: none;
+}
+.container .menu ul li#activeTouch {
+  background: rgba(0, 0, 0, 0.6) url(img/sanjiao.png) no-repeat 10px;
+  color: #fff;
+}
+.container .menu ul li:hover {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
